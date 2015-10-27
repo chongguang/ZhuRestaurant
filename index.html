@@ -1,0 +1,22 @@
+<html>
+
+	<head>
+		<title>Restaurant of Zhuxi Middle School</title>
+	    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+	    <script src="app.js"></script>
+	</head>
+
+	<body ng-app="ZhuRestaurant" ng-controller="MainCtrl">
+		<div>
+			{{test}}
+		</div>
+
+
+		<div ng-repeat="dish in dishs | orderBy: '-upvotes'">
+			{{dish.title}} - upvotes: {{dish.upvotes}}
+		</div>
+
+		<button ng-click="addPost()">Add dish</button>
+	</body>
+
+</html>
